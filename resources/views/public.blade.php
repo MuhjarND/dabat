@@ -101,7 +101,7 @@
             .col-mobile-4 .badge-status { padding: 6px 10px; font-size: 0.7rem; }
 
             .card-body h5 { font-weight: bold; font-size: 0.9rem; }
-            .card-body p { margin-bottom: 8px; font-size: 0.7rem; }
+            .card-body p { margin-bottom: 8px; font-size: 0.6rem; }
 
             .badge-status {
             font-size: 0.75rem;
