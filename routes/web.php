@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'PublicController@index');
 Route::get('/status-json', 'PublicController@json');
+Route::get('/test', 'PublicController@test');
 
 Auth::routes();
 

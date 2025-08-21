@@ -23,4 +23,15 @@ class PublicController extends Controller
 
         return response()->json($data);
     }
+
+    public function test(){
+        $data = DB::table('employees')
+            ->join('employee_statuses', 'employees.id', '=', 'employee_statuses.employee_id')
+            ->select('employees.id', 'employees.name', 'employees.position', 'employees.category', 'employees.photo', 'employee_statuses.status')
+            ->orderByRaw("FIELD(employees.category, 'Pimpinan', 'HakimTinggi', 'Kesekretariatan', 'Kepaniteraan')")
+            ->orderBy('employees.created_at')
+            ->get();
+
+        return $data;
+    }
 }
