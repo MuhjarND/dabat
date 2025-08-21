@@ -99,6 +99,12 @@
             .col-mobile-4 .card-body h5 { font-size: 0.8rem; }
             .col-mobile-4 .card-body p { font-size: 0.8rem; }
             .col-mobile-4 .badge-status { padding: 6px 10px; font-size: .85rem; }
+
+            .badge-status {
+            font-size: 0.75rem;
+            padding: 5px 10px;
+            letter-spacing: 0.3px;
+    }
         }
     </style>
 </head>
@@ -236,14 +242,16 @@ loadStatus();
 setInterval(loadStatus, 10000);
 
 /* Auto scroll naik-turun */
-let scrollDirection = 1;
-setInterval(() => {
-  const container = document.getElementById('scrollArea');
-  if (!container) return;
-  if ((container.scrollTop + container.clientHeight) >= container.scrollHeight) scrollDirection = -1;
-  if (container.scrollTop <= 0) scrollDirection = 1;
-  container.scrollTop += scrollDirection * 3; // kecepatan
-}, 50);
+if (window.innerWidth > 768) {
+  let scrollDirection = 1;
+  setInterval(() => {
+    const container = document.getElementById('scrollArea');
+    if (!container) return;
+    if ((container.scrollTop + container.clientHeight) >= container.scrollHeight) scrollDirection = -1;
+    if (container.scrollTop <= 0) scrollDirection = 1;
+    container.scrollTop += scrollDirection * 3; // kecepatan
+  }, 50);
+}
 </script>
 </body>
 </html>
