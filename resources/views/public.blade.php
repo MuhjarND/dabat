@@ -219,7 +219,7 @@ function loadStatus() {
         $(`#${safeId}`).append(`
           <div class="${colClassMobile} col-sm-4 col-md-3 mb-4">
             <div class="card status-card">
-              <img src="{{ asset('storage') }}/${emp.photo ?? ''}" class="card-img-top" alt="Foto ${emp.name}">
+              <img src="{{ asset('uploads') }}/${emp.photo ?? ''}" class="card-img-top" alt="Foto ${emp.name}">
               <div class="card-body text-center">
                 <h5 class="card-title">${emp.position ?? ''}</h5>
                 <p class="card-text">${emp.name}</p>
@@ -229,7 +229,7 @@ function loadStatus() {
           </div>
         `);
       });
-    });
+    }); 
   });
 }
 loadStatus();
