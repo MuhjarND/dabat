@@ -21,7 +21,7 @@
         <tbody>
             @forelse($employees as $emp)
             <tr>
-                <td>@if($emp->photo)<img src="/storage/{{ $emp->photo }}" width="60">@endif</td>
+                <td>@if($emp->photo)<img src="{{ asset('uploads') }}/{{ $emp->photo }}" width="60">@endif</td>
                 <td>{{ $emp->name }}</td>
                 <td>{{ $emp->position }}</td>
                 <td>{{ $emp->category }}</td>

@@ -32,7 +32,7 @@
             <label>Foto (biarkan kosong jika tidak diubah)</label>
             <input type="file" name="photo" class="form-control-file">
             @if($employee->photo)
-                <br><img src="/storage/{{ $employee->photo }}" width="100">
+                <br><img src="{{ asset('uploads') }}/{{ $employee->photo }}" width="100">
             @endif
             @error('photo') <div class="text-danger small">{{ $message }}</div> @enderror
         </div>
