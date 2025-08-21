@@ -96,16 +96,19 @@
             /* util: 3 kolom di mobile */
             .col-mobile-4 { flex: 0 0 33.3333%; max-width: 33.3333%; padding-left: 6px; padding-right: 6px; }
             .col-mobile-4 .card-img-top { height: 140px; }
-            .col-mobile-4 .card-body h5 { font-size: 0.8rem; }
-            .col-mobile-4 .card-body p { font-size: 0.8rem; }
-            .col-mobile-4 .badge-status { padding: 6px 10px; font-size: .85rem; }
+            .col-mobile-4 .card-body h5 { font-size: 0.6rem; }
+            .col-mobile-4 .card-body p { font-size: 0.6rem; }
+            .col-mobile-4 .badge-status { padding: 6px 10px; font-size: 0.7rem; }
+
+            .card-body h5 { font-weight: bold; font-size: 0.9rem; }
+            .card-body p { margin-bottom: 8px; font-size: 0.7rem; }
 
             .badge-status {
             font-size: 0.75rem;
             padding: 5px 10px;
             letter-spacing: 0.3px;
     }
-        }
+}
     </style>
 </head>
 <body>
